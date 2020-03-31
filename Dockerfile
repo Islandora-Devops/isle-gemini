@@ -59,6 +59,8 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 ENTRYPOINT ["docker-php-entrypoint"]
 
+STOPSIGNAL SIGWINCH
+
 WORKDIR /opt/crayfish/Gemini/
 
 EXPOSE 8000
