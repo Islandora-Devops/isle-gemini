@@ -1,0 +1,9 @@
+monolog:
+
+  handlers:
+
+    gemini:
+      type: rotating_file
+      path: /var/log/islandora/gemini.log
+      level: $GEMINI_LOG_LEVEL
+      max_files: 1
