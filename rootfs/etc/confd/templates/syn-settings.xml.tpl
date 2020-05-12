@@ -3,6 +3,6 @@
 <config version='1'>
     <site algorithm='RS256' encoding='PEM' path='/opt/jwt/public.key' default='true' anonymous='true'/>
     <token user='admin' roles='admin'>
-        $GEMINI_JWT_ADMIN_TOKEN
+        {{getv "/gemini/jwt/admin/token"}}
     </token>
 </config>

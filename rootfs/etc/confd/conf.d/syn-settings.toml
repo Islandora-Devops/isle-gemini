@@ -1,0 +1,7 @@
+[template]
+src = "syn-settings.xml.tpl"
+dest = "/opt/crayfish/Gemini/syn-settings.xml"
+mode = "0644"
+keys = [
+    "/gemini/jwt/admin/token",
+]

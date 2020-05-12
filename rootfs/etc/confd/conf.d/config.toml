@@ -1,0 +1,13 @@
+[template]
+src = "config.yaml.tpl"
+dest = "/opt/crayfish/Gemini/cfg/config.yaml"
+mode = "0644"
+keys = [
+    "/gemini/log/level",
+    "/gemini/db/driver",
+    "/gemini/db/host",
+    "/gemini/db/port",
+    "/gemini/db/name",
+    "/gemini/db/user",
+    "/gemini/db/password",
+]

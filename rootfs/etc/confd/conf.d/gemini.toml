@@ -1,0 +1,10 @@
+[template]
+src = "gemini.sql.tpl"
+dest = "/tmp/gemini.sql"
+mode = "0644"
+keys = [
+    "/gemini/db/name",
+    "/gemini/db/user",
+    "/gemini/db/password",
+]
+reload_cmd="mysql -h ${GEMINI_DB_HOST} -uroot -p${DB_ROOT_PASSWORD} < /tmp/gemini.sql"

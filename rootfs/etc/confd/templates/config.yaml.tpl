@@ -1,13 +1,14 @@
 ---
 
-fedora_resource:
-  base_url: http://fcrepo:8080/fcrepo/rest
+fedora_base_url: http://fedora:8080/fcrepo/rest
+
+debug: True
 
 log:
   # Valid log levels are:
   # DEBUG, INFO, NOTICE, WARNING, ERROR, CRITICAL, ALERT, EMERGENCY, NONE
   # log level none won't open logfile
-  level: $GEMINI_LOG_LEVEL
+  level: {{getv "/gemini/log/level"}}
   file: /var/log/islandora/gemini.log
 
 syn:
@@ -19,9 +20,9 @@ syn:
   config: ../syn-settings.xml
 
 db.options:
-  driver: pdo_mysql
-  host: mariadb
-  port: 3306
-  dbname: gemini
-  user: gemini
-  password: gemini
+  driver: {{getv "/gemini/db/driver"}}
+  host: {{getv "/gemini/db/host"}}
+  port: {{getv "/gemini/db/port"}}
+  dbname: {{getv "/gemini/db/name"}}
+  user: {{getv "/gemini/db/user"}}
+  password: {{getv "/gemini/db/password"}}
