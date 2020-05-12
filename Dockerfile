@@ -1,5 +1,4 @@
-FROM isle-crayfish-base:latest
-# Apache https://github.com/docker-library/php/blob/04c0ee7a0277e0ebc3fcdc46620cf6c1f6273100/7.4/buster/apache/Dockerfile
+FROM islandora/isle-crayfish-base:latest
 
 # Composer & Gemini
 # @see: Composer https://github.com/composer/getcomposer.org/commits/master (replace hash below with most recent hash)
